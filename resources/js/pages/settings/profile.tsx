@@ -1,7 +1,5 @@
 import { Transition } from '@headlessui/react';
-import { Form, Head, Link, usePage } from '@inertiajs/react';
-
-import ProfileController from '@/actions/App/Http/Controllers/Settings/ProfileController';
+import { Form, Head, Link, usePage, useForm } from '@inertiajs/react';
 import DeleteUser from '@/components/delete-user';
 import HeadingSmall from '@/components/heading-small';
 import InputError from '@/components/input-error';
@@ -13,6 +11,7 @@ import SettingsLayout from '@/layouts/settings/layout';
 import { edit } from '@/routes/profile';
 import { send } from '@/routes/verification';
 import { type BreadcrumbItem, type SharedData } from '@/types';
+import { route } from 'ziggy-js';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -30,6 +29,12 @@ export default function Profile({
 }) {
     const { auth } = usePage<SharedData>().props;
 
+    // ✅ Correctif : création du formulaire Inertia
+    const form = useForm({
+        name: auth.user.name,
+        email: auth.user.email,
+    });
+
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Profile settings" />
@@ -43,14 +48,17 @@ export default function Profile({
                         description="Update your name and email address"
                     />
 
+                 
                     <Form
-                        {...ProfileController.update.form()}
-                        options={{
-                            preserveScroll: true,
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            form.put(route('profil.update'), {
+                                preserveScroll: true,
+                            });
                         }}
                         className="space-y-6"
                     >
-                        {({ processing, recentlySuccessful, errors }) => (
+                        {({ processing, recentlySuccessful }) => (
                             <>
                                 <div className="grid gap-2">
                                     <Label htmlFor="name">Name</Label>
@@ -58,7 +66,10 @@ export default function Profile({
                                     <Input
                                         id="name"
                                         className="mt-1 block w-full"
-                                        defaultValue={auth.user.name}
+                                        value={form.data.name}
+                                        onChange={(e) =>
+                                            form.setData('name', e.target.value)
+                                        }
                                         name="name"
                                         required
                                         autoComplete="name"
@@ -67,7 +78,7 @@ export default function Profile({
 
                                     <InputError
                                         className="mt-2"
-                                        message={errors.name}
+                                        message={form.errors.name}
                                     />
                                 </div>
 
@@ -78,7 +89,10 @@ export default function Profile({
                                         id="email"
                                         type="email"
                                         className="mt-1 block w-full"
-                                        defaultValue={auth.user.email}
+                                        value={form.data.email}
+                                        onChange={(e) =>
+                                            form.setData('email', e.target.value)
+                                        }
                                         name="email"
                                         required
                                         autoComplete="username"
@@ -87,7 +101,7 @@ export default function Profile({
 
                                     <InputError
                                         className="mt-2"
-                                        message={errors.email}
+                                        message={form.errors.email}
                                     />
                                 </div>
 

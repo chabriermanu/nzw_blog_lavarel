@@ -2,19 +2,21 @@ import { Link, usePage } from '@inertiajs/react';
 
 export default function Nav() {
     const { auth } = usePage().props as any;
+
     return (
         <nav className="border-b bg-white py-2 shadow-md">
-            <div className="sm:pw-6 mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="sm:px-6 mx-auto max-w-7xl px-4 lg:px-8">
                 <div className="flex h-16 justify-between">
                     <div className="flex items-center">
                         <Link
                             href="/"
-                            className="text2xl font-black text-indigo-600"
+                            className="text-2xl font-black text-indigo-600"
                         >
                             Myblog
                         </Link>
                     </div>
-                    <div className="space-x-04 flex items-center">
+
+                    <div className="space-x-4 flex items-center">
                         {auth.user ? (
                             <Link
                                 href="/dashboard"

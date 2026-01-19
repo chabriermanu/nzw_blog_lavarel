@@ -24,7 +24,7 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard', [
-        'usersPosts'=> Auth::user()->posts()->with('author')->latest()->get(),
+        'userPosts'=> Auth::user()->posts()->with('author')->latest()->get(),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 

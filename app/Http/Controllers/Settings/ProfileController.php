@@ -44,7 +44,7 @@ class ProfileController extends Controller
     /**
      * Delete the user's account.
      */
-    public function destroy(ProfileDeleteRequest $request): RedirectResponse
+   /** */ public function destroy(ProfileDeleteRequest $request): RedirectResponse
     {
         $user = $request->user();
 

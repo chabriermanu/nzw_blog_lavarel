@@ -12,10 +12,10 @@ export default function Welcome({
     return (
         <>
             <Head title="Welcome" />
-            <div className="className:min-h-screen">
+            <div className="min-h-screen">
                 <Nav />
-                <div className="className:bg-white">
-                    <div className="className:max-w-7xl sm:px-6lg:px-8 mx-auto px-4 py-16 sm:py-24">
+                <div className="bg-white">
+                    <div className="max-w-7xl sm:px-6 lg:px-8 mx-auto px-4 py-16 sm:py-24">
                         <div className="text-center">
                             <h1 className="text-grey800 text-4xl font-black">
                                 <span className="block">Bienvenue sur </span>
@@ -56,6 +56,7 @@ export default function Welcome({
                     </div>
                     <ListPost posts={posts} />
                 </div>
+                
             </div>
         </>
     );

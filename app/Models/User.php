@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use App\Models\Post;
 
 class User extends Authenticatable
 {
@@ -52,14 +53,14 @@ class User extends Authenticatable
         ];
     }
 
-    public function post(): HasMany
+    public function posts(): HasMany
     {
         return $this->hasMany(Post::class);
     }
 
     public function likedPosts(): BelongsToMany
     {
-        return $this->BelongsToMany(Post::class, "post_likes");
+        return $this->belongsToMany(Post::class, "post_likes");
     }
 
 }

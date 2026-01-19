@@ -39,7 +39,7 @@ export interface ShowProps extends PageProps {
 }
 
 export interface Props {
-    post: Post[];
+    posts: Post[];
     showAuthor?: boolean;
     canEdit?: boolean;
 }
