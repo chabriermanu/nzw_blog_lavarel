@@ -49,17 +49,14 @@ export default function Create({}: CreateProps ) {
 
     return (
         <AppLayout 
-            breadcrumbs={breadcrumbs}
-            header={
-                <h2 className='font-semibold text-xl text-gray-800 leading-tight'>
-                    Créer un Post
-                </h2>
-            }
-        >
+            breadcrumbs={breadcrumbs}>
             <Head title="Créer un Post" />
-            <div>
-                
-                {/* Ton formulaire ici */}
+            <div className="py-12">
+                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div className="p-6">
+                        <h2 className="text-2xl font-semibold mb-6">Créer un Post</h2>
+                    </div>
+                </div>
             </div>
         
         </AppLayout>
