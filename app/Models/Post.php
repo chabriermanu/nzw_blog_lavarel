@@ -15,7 +15,7 @@ class Post extends Model
     protected $fillable = [
         'title',
         'description',
-        'image_path',
+        'image',
         'user_id',
     ];
 
@@ -23,18 +23,21 @@ class Post extends Model
 
     protected $with = ['likedBy'];
 
-    public function autor(): BelongsTo
+    public function author(): BelongsTo
     {
-        return $this->belongsTo(User::class, "user_id");
+        return $this->belongsTo(User::class, 'user_id');
     }
+
     public function likedBy(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, "post_likes");
+        return $this->belongsToMany(User::class, 'post_likes');
     }
+
     public function getIsLikedAttribute(): bool
     {
         return Auth::check() && $this->likedBy->contains('id', Auth::id());
     }
+
     public function getLikesCountAttribute(): int
     {
         return $this->likedBy->count();

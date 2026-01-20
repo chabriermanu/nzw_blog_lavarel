@@ -3,11 +3,9 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Settings\ProfileController;
 use App\Http\Controllers\WelcomeController;
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
 
 Route::get('/', [WelcomeController::class, 'index']);
 
@@ -32,8 +30,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile',[ProfileController::class,'edit'])->name('profil.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profil.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profil.destroy');
-        return Inertia::render('Dashboard');
 });
-
 
 require __DIR__.'/settings.php';

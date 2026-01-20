@@ -28,7 +28,7 @@ class PostController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|max:2048|mimes:jpeg,png,jpg,gif,svg',
+            'image' => 'nullable|image|max:3000|mimes:jpeg,png,jpg,gif,svg,webp',
         ]);
         $post = new Post();
         $post->title = $validated['title'];
@@ -58,7 +58,8 @@ class PostController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|max:2048|mimes:jpeg,png,jpg,gif,svg',
+            'image' => 'nullable|image|max:3000|mimes:jpeg,png,jpg,gif,svg,webp',
+            // faire mise a jour pour une vidéo 
         ]);
 
         $post->title = $validated['title'];

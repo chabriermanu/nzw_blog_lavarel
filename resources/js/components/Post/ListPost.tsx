@@ -42,7 +42,7 @@ export default function ListPost({ posts, showAuthor = true }: Props) {
         <Card key={post.id} className="overflow-hidden">
           {post.image && (
             <div className="aspect-w-16 aspect-h-9">
-              <img className="object-cover w-full h-48" src={`/storage/${post.image}`} alt={post.title} />
+              <img className="object-cover rounded-md w-[94] h-[94]" src={`/storage/${post.image}`} alt={post.title} />
             </div>
           )}
           <CardHeader>
