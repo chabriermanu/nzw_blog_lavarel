@@ -18,7 +18,7 @@ export interface Post {
 }
 
 export interface PostFormData {
-    [key: string]: string | File | null; // Corrigé: "keyo" -> "key"
+    [key: string]: string | File | null;
     title: string;
     description: string;
     image: File | null;
@@ -28,14 +28,14 @@ export interface DashboardProps extends PageProps {
     userPosts: Post[];
 }
 
-export interface CreateProps extends PageProps {} // Corrigé: "interfcae" -> "interface"
+export interface CreateProps extends PageProps {}
 
 export interface EditProps extends PageProps {
-    post: Post; // Tu voudras probablement ajouter la propriété post ici
+    post: Post;
 }
 
 export interface ShowProps extends PageProps {
-    post: Post; // Et ici aussi
+    post: Post;
 }
 
 export interface Props {
