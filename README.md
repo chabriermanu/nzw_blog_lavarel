@@ -1,9 +1,9 @@
 # 📝 Laravel Blog System
 
-> Application web moderne de gestion de posts/articles construite avec Laravel 11, Inertia.js, React et TypeScript.
+> Application web moderne de gestion de posts/articles construite avec Laravel 12, Inertia.js, React et TypeScript.
 
-[![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=flat&logo=laravel)](https://laravel.com)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)](https://reactjs.org)
+[![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=flat&logo=laravel)](https://laravel.com)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)](https://reactjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org)
 [![Inertia.js](https://img.shields.io/badge/Inertia.js-2-9553E9?style=flat)](https://inertiajs.com)
 ![Version](https://img.shields.io/badge/Version-1.0-green)
@@ -42,7 +42,7 @@ Développée dans le cadre de ma formation de Développeur Web et Web Mobile à 
 - 🧹 Nettoyage et réorganisation des paramètres et routes web
 
 **Phase 1 : Configuration Initiale**
-- 🚀 Installation et configuration de Laravel 11
+- 🚀 Installation et configuration de Laravel 12
 - 🔐 Configuration de Fortify pour l'authentification
 - ⚛️ Configuration Inertia.js + React + TypeScript
 - 📝 Système de posts avec CRUD complet
@@ -67,13 +67,13 @@ Développée dans le cadre de ma formation de Développeur Web et Web Mobile à 
 ## 🛠️ Stack Technique
 
 ### Backend
-- **Laravel 11** - Framework PHP moderne
+- **Laravel 12** - Framework PHP moderne
 - **Laravel Fortify** - Authentification robuste
 - **PHP 8.3+** - Langage serveur
 - **MySQL** - Base de données relationnelle
 
 ### Frontend
-- **React 18** - Bibliothèque UI
+- **React 19** - Bibliothèque UI
 - **TypeScript** - Typage statique
 - **Inertia.js 2** - Adaptateur SPA pour Laravel
 - **Tailwind CSS** - Framework CSS utilitaire
@@ -360,11 +360,11 @@ php artisan storage:link
 
 ## 📚 Ressources et Documentation
 
-- [Documentation Laravel 11](https://laravel.com/docs/11.x)
+- [Documentation Laravel 12](https://laravel.com/docs/12.x)
 - [Documentation Inertia.js](https://inertiajs.com)
 - [Documentation React](https://react.dev)
 - [Documentation TypeScript](https://www.typescriptlang.org/docs)
-- [Laravel Fortify](https://laravel.com/docs/11.x/fortify)
+- [Laravel Fortify](https://laravel.com/docs/12.x/fortify)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 
 ## 👨‍💻 Auteur
@@ -372,7 +372,7 @@ php artisan storage:link
 **Emmanuel Chabrier** - Développeur Web Full-Stack en formation
 
 🎓 **Formation :** Développeur Web et Web Mobile - AFPA Saint-Jean-de-Védas  
-📅 **Période :** Septembre 2025 - Mai 2026  
+📅 **Période :** Septembre 2025 - Avril 2026  
 🔍 **Recherche :** Stage de 10 semaines (Février 2026)  
 📍 **Localisation :** Saint-Geniès-de-Fontédit, France
 
@@ -394,7 +394,7 @@ php artisan storage:link
 - 💡 LinkedIn: [Votre profil LinkedIn](https://www.linkedin.com/in/votre-profil)
 - 📧 Contact: chabrier.emmanuel@hotmail.fr
 
-💡 *Ouvert aux opportunités  en développement web full-stack*
+💡 *Ouvert aux opportunités de stage en développement web full-stack*
 
 ## 📄 Licence
 
